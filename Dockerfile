@@ -4,6 +4,7 @@ FROM public.ecr.aws/docker/library/ubuntu:latest
 RUN apt-get update
 
 RUN apt-get install python3 -y
+RUN apt-get install python3-pip -y
 ARG FUNCTION_DIR="/home/app/"
 COPY .  ${FUNCTION_DIR}
 RUN mkdir -p ${FUNCTION_DIR}
